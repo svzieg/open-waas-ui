@@ -1,7 +1,6 @@
-<p>post works!</p>
+<app-dynamic-grid
+  cols='2'
+  [elements]='posts | async'>
 
-    <ul>
-      <li *ngFor="let post of posts">
-        {{post.breed}}
-      </li>
-    </ul>
+
+</app-dynamic-grid>
