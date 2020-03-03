@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Create Page</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="data.title" required>
+    <mat-error *ngIf="!data.title">Title must be set</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Url</mat-label>
+    <input matInput [(ngModel)]="data.url" required>
+    <mat-error *ngIf="!data.url">Url must be set</mat-error>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Create Page</button>
+</div>

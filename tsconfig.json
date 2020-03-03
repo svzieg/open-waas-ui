@@ -18,7 +18,13 @@
       "es2018",
       "dom",
       "esnext.asynciterable"
-    ]
+    ],
+    "paths": {
+      "base-elements": [
+        "dist/base-elements/base-elements",
+        "dist/base-elements"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

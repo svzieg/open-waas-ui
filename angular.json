@@ -125,6 +125,46 @@
           }
         }
       }
+    },
+    "base-elements": {
+      "projectType": "library",
+      "root": "projects/base-elements",
+      "sourceRoot": "projects/base-elements/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/base-elements/tsconfig.lib.json",
+            "project": "projects/base-elements/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/base-elements/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/base-elements/src/test.ts",
+            "tsConfig": "projects/base-elements/tsconfig.spec.json",
+            "karmaConfig": "projects/base-elements/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/base-elements/tsconfig.lib.json",
+              "projects/base-elements/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "open-waas-ui"

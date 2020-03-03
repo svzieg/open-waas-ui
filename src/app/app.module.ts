@@ -23,6 +23,14 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatCardModule } from '@angular/material/card';
 import { HelperModule } from './helper/helper.module';
+import { PagesModule } from './pages/pages.module';
+import { AdminModule } from './admin/admin.module';
+
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { TestTableComponent } from './test-table/test-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -30,7 +38,8 @@ import { HelperModule } from './helper/helper.module';
     AppComponent,
     PostListComponent,
     NavigationComponent,
-    DashboardComponent
+    DashboardComponent,
+    TestTableComponent
   ],
   imports: [
     BrowserModule,
@@ -50,8 +59,14 @@ import { HelperModule } from './helper/helper.module';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatFormFieldModule,
     MatCardModule,
     HelperModule,
+    PagesModule,
+    AdminModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   bootstrap: [AppComponent]
 })
